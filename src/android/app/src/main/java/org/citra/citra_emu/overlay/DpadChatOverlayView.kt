@@ -108,7 +108,7 @@ class DpadChatOverlayView(context: Context) : FrameLayout(context) {
         val toggleParams = LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT).apply {
             gravity = Gravity.TOP or Gravity.END
             topMargin = dp(12)
-            marginEnd = dp(14)
+            marginEnd = dp(95)
         }
         addView(toggleButton, toggleParams)
 
@@ -276,6 +276,7 @@ class DpadChatOverlayView(context: Context) : FrameLayout(context) {
                 setTextSize(TypedValue.COMPLEX_UNIT_SP, 12f)
                 setPadding(dp(12), dp(4), dp(12), dp(4))
                 isFocusable = true
+                isFocusableInTouchMode = true
                 background = createKeyFocusDrawable("#2A3B4C", "#FFFFFF")
                 setTextColor(createKeyTextColors())
                 setOnClickListener {
@@ -306,6 +307,7 @@ class DpadChatOverlayView(context: Context) : FrameLayout(context) {
                     minHeight = 0
                     minimumHeight = 0
                     isFocusable = true
+                isFocusableInTouchMode = true
                     id = View.generateViewId()
                     background = createKeyFocusDrawable("#2C2C2C", "#FFFFFF")
                     setTextColor(createKeyTextColors())
@@ -375,7 +377,7 @@ class DpadChatOverlayView(context: Context) : FrameLayout(context) {
         drawerPanel.visibility = View.VISIBLE
         refreshDrawerHistory()
         updateInputPreview()
-        quickChatRow.getChildAt(0)?.requestFocus()
+        keyboardGrid.getChildAt(10)?.requestFocus() ?: quickChatRow.getChildAt(0)?.requestFocus()
     }
 
     fun closeDrawer() {
@@ -393,6 +395,14 @@ class DpadChatOverlayView(context: Context) : FrameLayout(context) {
                 KeyEvent.KEYCODE_BUTTON_B, KeyEvent.KEYCODE_BACK -> { closeDrawer(); return true }
                 KeyEvent.KEYCODE_BUTTON_X -> { onVirtualKeyPressed("DEL"); return true }
                 KeyEvent.KEYCODE_BUTTON_Y -> { onVirtualKeyPressed("SPACE"); return true }
+                KeyEvent.KEYCODE_BUTTON_A, KeyEvent.KEYCODE_DPAD_CENTER -> {
+                    findFocus()?.performClick()
+                    return true
+                }
+                KeyEvent.KEYCODE_BUTTON_START -> {
+                    onVirtualKeyPressed("SEND")
+                    return true
+                }
             }
         }
         return false

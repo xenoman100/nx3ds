@@ -447,7 +447,8 @@ class EmulationActivity : AppCompatActivity() {
             return true
         }
         if (chatOverlayView?.isDrawerOpen == true) {
-            return chatOverlayView?.handleKeyEvent(event) == true || super.dispatchKeyEvent(event)
+            if (chatOverlayView?.handleKeyEvent(event) == true) return true
+            return super.dispatchKeyEvent(event)
         }
         if (emulationFragment.isDrawerOpen()) {
             return super.dispatchKeyEvent(event)
