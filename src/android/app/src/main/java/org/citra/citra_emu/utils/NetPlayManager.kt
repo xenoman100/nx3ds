@@ -162,7 +162,10 @@ object NetPlayManager {
     private val chatMessages = mutableListOf<ChatMessage>()
     private var isChatOpen = false
 
+    var overlayChatListener: ((String, String) -> Unit)? = null
+
     fun addChatMessage(message: ChatMessage) {
+        overlayChatListener?.invoke(message.nickname, message.message)
         chatMessages.add(message)
     }
 

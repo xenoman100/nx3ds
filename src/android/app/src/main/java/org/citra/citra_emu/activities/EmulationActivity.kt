@@ -56,6 +56,7 @@ import org.citra.citra_emu.utils.EmulationMenuSettings
 import org.citra.citra_emu.utils.FileBrowserHelper
 import org.citra.citra_emu.utils.GameHelper
 import org.citra.citra_emu.utils.Log
+import org.citra.citra_emu.overlay.DpadChatOverlayView
 import org.citra.citra_emu.utils.NetPlayManager
 import org.citra.citra_emu.utils.PermissionsHandler
 import org.citra.citra_emu.utils.RefreshRateUtil
@@ -88,6 +89,7 @@ class EmulationActivity : AppCompatActivity() {
     private var isRotationBlocked: Boolean = true
     private var isEmulationRunning: Boolean = false
     private var isEmulationReady: Boolean = false
+    private var chatOverlayView: DpadChatOverlayView? = null
 
     private fun ensureUserDirectoryReady(): Boolean {
         if (DirectoryInitialization.areCitraDirectoriesReady()) return true
@@ -142,6 +144,13 @@ class EmulationActivity : AppCompatActivity() {
         binding = ActivityEmulationBinding.inflate(layoutInflater)
         gamepadEventHandler = GamepadEventHandler(screenAdjustmentUtil, this)
         setContentView(binding.root)
+        val overlay = DpadChatOverlayView(this)
+        chatOverlayView = overlay
+        addContentView(overlay, android.view.ViewGroup.LayoutParams(
+            android.view.ViewGroup.LayoutParams.MATCH_PARENT,
+            android.view.ViewGroup.LayoutParams.MATCH_PARENT
+        ))
+        NetPlayManager.overlayChatListener = { sender, msg -> overlay.onChatReceived(sender, msg) }
 
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.fragment_container) as NavHostFragment
@@ -433,6 +442,13 @@ class EmulationActivity : AppCompatActivity() {
             return false
         }
 
+        if (event.keyCode == KeyEvent.KEYCODE_BUTTON_THUMBR && event.action == KeyEvent.ACTION_UP) {
+            chatOverlayView?.let { if (it.isDrawerOpen) it.closeDrawer() else it.openDrawer() }
+            return true
+        }
+        if (chatOverlayView?.isDrawerOpen == true) {
+            return chatOverlayView?.handleKeyEvent(event) == true || super.dispatchKeyEvent(event)
+        }
         if (emulationFragment.isDrawerOpen()) {
             return super.dispatchKeyEvent(event)
         }
