@@ -40,6 +40,8 @@ jobs:
 
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
+        with:
+          validate-wrappers: false
 
       - name: Build NX3DS Vanilla ARM64 Release
         working-directory: src/android
