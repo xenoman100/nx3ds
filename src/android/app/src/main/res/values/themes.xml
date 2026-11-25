@@ -277,7 +277,6 @@
         <item name="colorOnSurfaceInverse">@color/nx3ds_inverseOnSurface</item>
         <item name="colorSurfaceInverse">@color/nx3ds_inverseSurface</item>
         <item name="colorPrimaryInverse">@color/nx3ds_inversePrimary</item>
-        <item name="colorSurfaceTint">@color/nx3ds_surfaceTint</item>
     </style>
 
 </resources>
