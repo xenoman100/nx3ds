@@ -26,7 +26,7 @@ object ThemeUtil {
         PreferenceManager.getDefaultSharedPreferences(CitraApplication.appContext)
 
     private fun getSelectedStaticThemeColor(): Int {
-        val themeIndex = preferences.getInt(CitraSettings.PREF_STATIC_THEME_COLOR, 0)
+        val themeIndex = preferences.getInt(CitraSettings.PREF_STATIC_THEME_COLOR, 9)
         val themes = arrayOf(
             R.style.Theme_Citra_Blue,
             R.style.Theme_Citra_Cyan,
@@ -36,7 +36,8 @@ object ThemeUtil {
             R.style.Theme_Citra_Orange,
             R.style.Theme_Citra_Violet,
             R.style.Theme_Citra_Pink,
-            R.style.Theme_Citra_Gray
+            R.style.Theme_Citra_Gray,
+            R.style.Theme_NX3DS_Midnight
         )
         return themes[themeIndex]
     }

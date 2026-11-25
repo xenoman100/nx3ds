@@ -2058,7 +2058,7 @@ class SettingsFragmentPresenter(
                     R.array.staticThemeNames,
                     R.array.staticThemeValues,
                     getValue = {
-                        preferences.getInt(CitraSettings.PREF_STATIC_THEME_COLOR, 0)
+                        preferences.getInt(CitraSettings.PREF_STATIC_THEME_COLOR, 9)
                     },
                     setValue = {
                         preferences.edit()

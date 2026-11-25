@@ -262,4 +262,31 @@
     <color name="citra_onSecondary_gray">#FFFFFF</color>
     <color name="citra_onTertiary_gray">#FFFFFF</color>
 
+
+    <!-- NX3DS Midnight Theme Colors -->
+    <color name="nx3ds_midnight">#050912</color>
+    <color name="nx3ds_primary">#154FE2</color>
+    <color name="nx3ds_onPrimary">#FFFFFF</color>
+    <color name="nx3ds_primaryContainer">#183A83</color>
+    <color name="nx3ds_onPrimaryContainer">#DCE7FF</color>
+    <color name="nx3ds_secondary">#15E2D1</color>
+    <color name="nx3ds_onSecondary">#00201D</color>
+    <color name="nx3ds_secondaryContainer">#10433F</color>
+    <color name="nx3ds_onSecondaryContainer">#A0FFF3</color>
+    <color name="nx3ds_tertiary">#75B9FF</color>
+    <color name="nx3ds_onTertiary">#002F55</color>
+    <color name="nx3ds_tertiaryContainer">#12436D</color>
+    <color name="nx3ds_onTertiaryContainer">#D2E8FF</color>
+    <color name="nx3ds_background">#050912</color>
+    <color name="nx3ds_onBackground">#F5F8FF</color>
+    <color name="nx3ds_surface">#111C30</color>
+    <color name="nx3ds_onSurface">#F5F8FF</color>
+    <color name="nx3ds_surfaceVariant">#1C2B45</color>
+    <color name="nx3ds_onSurfaceVariant">#C0CEE5</color>
+    <color name="nx3ds_outline">#526985</color>
+    <color name="nx3ds_inverseOnSurface">#111C30</color>
+    <color name="nx3ds_inverseSurface">#F5F8FF</color>
+    <color name="nx3ds_inversePrimary">#AFC5FF</color>
+    <color name="nx3ds_surfaceTint">#154FE2</color>
+
 </resources>

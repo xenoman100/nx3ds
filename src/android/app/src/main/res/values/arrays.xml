@@ -354,6 +354,7 @@
         <item>Violet</item>
         <item>Pink</item>
         <item>Gray</item>
+        <item>NX3DS Midnight</item>
     </string-array>
     <integer-array name="staticThemeValues">
         <item>0</item>
@@ -365,6 +366,7 @@
         <item>6</item>
         <item>7</item>
         <item>8</item>
+        <item>9</item>
     </integer-array>
 
     <string-array name="themeModeEntries">

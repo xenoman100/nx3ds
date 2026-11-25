@@ -252,4 +252,32 @@
         <item name="colorSurfaceInverse">@color/citra_inverseSurface_pink</item>
         <item name="colorPrimaryInverse">@color/citra_inversePrimary_pink</item>
     </style>
+
+    <!-- NX3DS Midnight Theme -->
+    <style name="Theme.NX3DS.Midnight" parent="Theme.Citra">
+        <item name="colorPrimary">@color/nx3ds_primary</item>
+        <item name="colorOnPrimary">@color/nx3ds_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/nx3ds_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/nx3ds_onPrimaryContainer</item>
+        <item name="colorSecondary">@color/nx3ds_secondary</item>
+        <item name="colorOnSecondary">@color/nx3ds_onSecondary</item>
+        <item name="colorSecondaryContainer">@color/nx3ds_secondaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/nx3ds_onSecondaryContainer</item>
+        <item name="colorTertiary">@color/nx3ds_tertiary</item>
+        <item name="colorOnTertiary">@color/nx3ds_onTertiary</item>
+        <item name="colorTertiaryContainer">@color/nx3ds_tertiaryContainer</item>
+        <item name="colorOnTertiaryContainer">@color/nx3ds_onTertiaryContainer</item>
+        <item name="android:colorBackground">@color/nx3ds_background</item>
+        <item name="colorOnBackground">@color/nx3ds_onBackground</item>
+        <item name="colorSurface">@color/nx3ds_surface</item>
+        <item name="colorOnSurface">@color/nx3ds_onSurface</item>
+        <item name="colorSurfaceVariant">@color/nx3ds_surfaceVariant</item>
+        <item name="colorOnSurfaceVariant">@color/nx3ds_onSurfaceVariant</item>
+        <item name="colorOutline">@color/nx3ds_outline</item>
+        <item name="colorOnSurfaceInverse">@color/nx3ds_inverseOnSurface</item>
+        <item name="colorSurfaceInverse">@color/nx3ds_inverseSurface</item>
+        <item name="colorPrimaryInverse">@color/nx3ds_inversePrimary</item>
+        <item name="colorSurfaceTint">@color/nx3ds_surfaceTint</item>
+    </style>
+
 </resources>
