@@ -47,7 +47,7 @@ jobs:
         working-directory: src/android
         run: |
           chmod +x gradlew
-          ./gradlew --no-daemon :app:assembleVanillaRelease
+          ./gradlew --no-daemon --stacktrace :app:assembleVanillaRelease
 
       - name: Upload NX3DS APK
         uses: actions/upload-artifact@v4
