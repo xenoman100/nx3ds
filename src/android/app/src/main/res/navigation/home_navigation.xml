@@ -41,6 +41,11 @@
         android:label="SearchFragment" />
 
     <fragment
+        android:id="@+id/playerHubFragment"
+        android:name="org.citra.citra_emu.fragments.PlayerHubFragment"
+        android:label="PlayerHubFragment" />
+
+    <fragment
         android:id="@+id/aboutFragment"
         android:name="org.citra.citra_emu.fragments.AboutFragment"
         android:label="AboutFragment" >

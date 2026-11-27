@@ -12,6 +12,11 @@
         android:title="@string/home_search" />
 
     <item
+        android:id="@+id/playerHubFragment"
+        android:icon="@drawable/ic_player_hub"
+        android:title="@string/home_player_hub" />
+
+    <item
         android:id="@+id/homeSettingsFragment"
         android:icon="@drawable/ic_more"
         android:title="@string/home_options" />
