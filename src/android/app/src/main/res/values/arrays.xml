@@ -709,4 +709,34 @@
         <item>1</item>
     </integer-array>
 
+
+    <!-- NX3DS Wallpaper Options -->
+    <string-array name="nx3ds_wallpaper_styles">
+        <item>NX3DS Midnight</item>
+        <item>Neon Pulse</item>
+        <item>Cosmic</item>
+        <item>Minimal</item>
+        <item>Holographic</item>
+        <item>Sandy</item>
+        <item>Fireflies</item>
+    </string-array>
+
+    <string-array name="nx3ds_wallpaper_speeds">
+        <item>Slow</item>
+        <item>Normal</item>
+        <item>Fast</item>
+    </string-array>
+
+    <string-array name="nx3ds_wallpaper_qualities">
+        <item>Battery saver</item>
+        <item>Balanced</item>
+        <item>High</item>
+    </string-array>
+
+    <string-array name="nx3ds_wallpaper_frame_rates">
+        <item>30 FPS</item>
+        <item>60 FPS</item>
+        <item>Automatic</item>
+    </string-array>
+
 </resources>

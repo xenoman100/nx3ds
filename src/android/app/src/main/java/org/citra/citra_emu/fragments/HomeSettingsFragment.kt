@@ -189,6 +189,16 @@ class HomeSettingsFragment : Fragment() {
                 { SettingsActivity.launch(requireContext(), CitraSettings.SECTION_THEME, "") }
             ),
             HomeSetting(
+                R.string.nx3ds_wallpaper_settings,
+                R.string.nx3ds_wallpaper_settings_description,
+                R.drawable.ic_palette,
+                {
+                    exitTransition = MaterialSharedAxis(MaterialSharedAxis.X, true)
+                    parentFragmentManager.primaryNavigationFragment?.findNavController()
+                        ?.navigate(R.id.action_homeSettingsFragment_to_wallpaperSettingsFragment)
+                }
+            ),
+            HomeSetting(
                 R.string.about,
                 R.string.about_description,
                 R.drawable.ic_info_outline,

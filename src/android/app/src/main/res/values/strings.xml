@@ -1151,4 +1151,21 @@
     <string name="update_check_channel_stable">Stable</string>
     <string name="update_check_channel_prerelease">Prerelease</string>
 
+
+    <!-- NX3DS Wallpaper Settings -->
+    <string name="nx3ds_wallpaper_settings">Wallpaper</string>
+    <string name="nx3ds_wallpaper_settings_description">Customize your NX3DS animated background</string>
+    <string name="nx3ds_wallpaper_appearance">Wallpaper appearance</string>
+    <string name="nx3ds_wallpaper_appearance_description">Choose the background style for your NX3DS home screens. Themes and wallpapers can be customized independently.</string>
+    <string name="nx3ds_wallpaper_style">Wallpaper style</string>
+    <string name="nx3ds_wallpaper_performance">Performance</string>
+    <string name="nx3ds_wallpaper_speed">Animation speed</string>
+    <string name="nx3ds_wallpaper_quality">Visual quality</string>
+    <string name="nx3ds_wallpaper_frame_rate">Frame rate</string>
+    <string name="nx3ds_wallpaper_effects">Effects</string>
+    <string name="nx3ds_wallpaper_motion">Motion effects</string>
+    <string name="nx3ds_wallpaper_touch">Touch response</string>
+    <string name="nx3ds_wallpaper_parallax">Parallax effect</string>
+    <string name="nx3ds_wallpaper_static">Use static wallpaper</string>
+
 </resources>

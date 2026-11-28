@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_homeSettingsFragment_to_driverManagerFragment"
             app:destination="@id/driverManagerFragment" />
+        <action
+            android:id="@+id/action_homeSettingsFragment_to_wallpaperSettingsFragment"
+            app:destination="@id/wallpaperSettingsFragment" />
     </fragment>
 
     <fragment
@@ -98,5 +101,11 @@
         android:id="@+id/driverManagerFragment"
         android:name="org.citra.citra_emu.fragments.DriverManagerFragment"
         android:label="DriverManagerFragment" />
+
+
+    <fragment
+        android:id="@+id/wallpaperSettingsFragment"
+        android:name="org.citra.citra_emu.fragments.WallpaperSettingsFragment"
+        android:label="WallpaperSettingsFragment" />
 
 </navigation>
